@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px; 
+    flex-direction: column;
+    background-color: bisque; 
+    color:brown;
+}
+
+.container {
+    display: grid;
+    justify-content: center; 
+    align-items: center;
+    margin: 70px;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, auto );
+    grid-template-rows: repeat(3, auto);
+    height: 80vh;
+    width:90vh;
+    cursor: pointer;
+}
+
+.cards {
+    
+}
+.cards, .back {
+   backface-visibility: hiden; 
+
+    /* display: grid;
+    border: 50%; */
+    
+    
+}
+/* .cards:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+    
+} */
+.back {
+    background-image: ulr("https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png");
+    transform: rotateY(180deg);
+
+}
