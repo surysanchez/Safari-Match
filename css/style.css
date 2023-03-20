@@ -6,47 +6,70 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
+    height:100vh;
+    background-color: bisque;
+    /* text-align: center; */
+     display: flex; 
     align-items: center;
-    margin: 0;
-    padding: 20px; 
+    justify-content: center;
     flex-direction: column;
-    background-color: bisque; 
-    color:brown;
 }
 
 .container {
-    display: grid;
-    justify-content: center; 
+    /* border: 2px solid red; */
+     width:900px;
+    height:700px;  
+    display: flex;  
+    flex-wrap: wrap;
     align-items: center;
-    margin: 70px;
-    grid-gap: 20px;
-    grid-template-columns: repeat(4, auto );
-    grid-template-rows: repeat(3, auto);
-    height: 80vh;
-    width:90vh;
-    cursor: pointer;
+    margin: auto;
+    align-items: center;
+     perspective:1000px; 
+
+
 }
 
 .cards {
-    
-}
-.cards, .back {
-   backface-visibility: hiden; 
+    width:25%;
+    height: 32%;
+    position:relative;
+    margin:0;
+    transform: scale(1.1);
+     transform-style: preserve-3d; 
+     transition: transform .5s 
 
-    /* display: grid;
-    border: 50%; */
-    
-    
 }
-/* .cards:active {
-    transform: scale(0.97);
-    transition: transform .2s;
-    
-} */
-.back {
-    background-image: ulr("https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png");
+.cards.turn {
+    transform: rotateY(180deg)
+
+}
+
+Not working ???
+body > span:second child {
+    margin-left: auto;
+}
+ /* img {
+    width: 60px;
+    height: 65px;
+ 
+}         */
+
+.frontC, .backC {
+    width: 100%;
+    height:100%;
+    padding: 20px;
+     position: absolute; 
+     backface-visibility:hidden ;
+}
+.frontC {
     transform: rotateY(180deg);
-
 }
+
+.cards:active {
+    transform: scale(0.9);
+    transition: transform .2s;
+
+}  
+
+
+

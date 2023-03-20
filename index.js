@@ -1,11 +1,14 @@
 /*----- constants -----*/
-const cardsArray = []
-let matched 
-let notMatched
+// To store the cards the user has clicked 
+let cardsTurned = false;
+ let openCards = []
+ let matchCards = []
+ let notMatchC = []
 
-const lives = 10;
 
-attempts.textContent = lives;
+
+
+// const moves = 0;
 
 
 /*----- state variables -----*/
@@ -16,58 +19,46 @@ attempts.textContent = lives;
 
 // Defining variables and data
 
-const styleCards = document.querySelectorAll(".cards");
 
-const attempts = document.getElementById('moves-left');
+ const attempts = document.getElementById('moves-left');
+
+ const restartGame = document.getElementById('auto-restart')
+ const allCards = document.querySelectorAll('.cards')
+ // all the cards id's
+const img_1 = document.getElementById('img-1')
+const img_2 = document.getElementById('img-2')
+const img_3 = document.getElementById('img-3')
+const img_4 = document.getElementById('img-4')
+const img_5 = document.getElementById('img-5')
+const img_6 = document.getElementById('img-6')
  
 
-
-// create an array of objects with key property 'img' and the value are card's url 
-const cardsValue = [
-    {img: "https://cdn.pixabay.com/photo/2017/05/31/18/38/sea-2361247_1280.jpg" ,// front_0
-    img: "https://cdn.pixabay.com/photo/2017/05/31/18/38/sea-2361247_1280.jpg",//pair_0
-    img:"https://cdn.pixabay.com/photo/2017/05/08/13/15/bird-2295436__480.jpg" , // front_1
-    img: "https://cdn.pixabay.com/photo/2017/05/08/13/15/bird-2295436__480.jpg" , //pair_1
-    img: "https://cdn.pixabay.com/photo/2018/07/31/22/08/lion-3576045__480.jpg" ,// front_2
-    img: "https://cdn.pixabay.com/photo/2018/07/31/22/08/lion-3576045__480.jpg" , //pair_2
-    img:"https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554__480.jpg" ,//front_3
-    img: "https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554__480.jpg", // pair_3
-    img:"https://cdn.pixabay.com/photo/2019/08/19/07/45/corgi-4415649__480.jpg" ,//front_4
-    img:"https://cdn.pixabay.com/photo/2019/08/19/07/45/corgi-4415649__480.jpg", //pair_4
-    img:"https://cdn.pixabay.com/photo/2017/06/09/09/39/adler-2386314__480.jpg", //front_5
-    img:"https://cdn.pixabay.com/photo/2017/06/09/09/39/adler-2386314__480.jpg" //pair_5
-
-    }
-
-]
-
 /*----- event listeners -----*/
+// 1st step To reveal the cards , we loop through all the cards slected and fire an event listener so when the cards are clicked we show the card
+allCards.forEach(function(card){
+  this.addEventListener('click', showCard)
 
-cardsValue.classList.add('cards').addEventListener('click', tossCard)
-
+  if (cardsTurned) {
+    return 
+  }
+})
 
 
 
 	/*----- functions -----*/
 // Best method to shuffle the array is using the Fisher-Yates shuffle algorithm
-function shuffleCards(cardsValue) {
-  for (let i = cardsValue.length -1 ;i > 0; i--)
-  var random = Math.floor(Math.random() * (i + 1 ));
-  [cardsValue[i], cardsValue[random] = [cardsValue[random], cardsValue[i]]] ;
- 
-  
-}
-shuffleCards(cardsValue)
-
-
-function showCard() {
-  
-}
-
+// 2nd step is to show the cards , in this callback funtion we need to add a class to 
+ function showCard() {
+  //  console.log('this')'this' reprent our cards in the window
+  this.classList.add('turn')// flip
+ }
+// showCard()
 
 // changing the cards (not flipping them) refering than when I'm selecting the img I want to change the look not the card
 
-
+// function cardsPairs() {
+//   cardsValue.classList.add()
+// }
 
 
 // function tossCard() {
@@ -76,32 +67,11 @@ function showCard() {
 
   //it would be called when program loads to initialize the game  
   // i can be also a callback funtion for the restart button 
-function init(){
-
-}
-
-    
-
-
-
- 
-
-
-
-// // const optionOfCards = [
-// //     [card_0 , card_1 , card_2, card_3, card_4, card_5, card_7, card_8, card_9, card_10, card_11, card_12]
-// // ]
-
-
-
-
-
-// function allTheCards(){
+// function init(){
 
 // }
 
-
-
+    
 
 
 // Make the front of the cards display black
