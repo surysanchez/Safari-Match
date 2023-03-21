@@ -1,12 +1,9 @@
 /*----- constants -----*/
 // To store the cards the user has clicked 
-let cardsTurned = false;
- let openCards = []
- let matchCards = []
- let notMatchC = []
-
-
-
+let firstOpenC 
+let secondOpenC 
+ let cardsTurned = false;
+//  let cardsMatched = []
 
 // const moves = 0;
 
@@ -20,56 +17,61 @@ let cardsTurned = false;
 // Defining variables and data
 
 
- const attempts = document.getElementById('moves-left');
+//  const attempts = document.getElementById('moves-left').textContent = score;
 
- const restartGame = document.getElementById('auto-restart')
+//  const restartGame = document.getElementById('auto-restart')
  const allCards = document.querySelectorAll('.cards')
- // all the cards id's
-const img_1 = document.getElementById('img-1')
-const img_2 = document.getElementById('img-2')
-const img_3 = document.getElementById('img-3')
-const img_4 = document.getElementById('img-4')
-const img_5 = document.getElementById('img-5')
-const img_6 = document.getElementById('img-6')
+
  
 
 /*----- event listeners -----*/
 // 1st step To reveal the cards , we loop through all the cards slected and fire an event listener so when the cards are clicked we show the card
-allCards.forEach(function(card){
-  this.addEventListener('click', showCard)
-
-  if (cardsTurned) {
-    return 
-  }
-})
 
 
+ allCards.forEach(function(card) {
+  let random = Math.floor(Math.random() * 12)
+      card.style.order = random
+   card.addEventListener('click', showCard)
+
+ })
 
 	/*----- functions -----*/
-// Best method to shuffle the array is using the Fisher-Yates shuffle algorithm
+
 // 2nd step is to show the cards , in this callback funtion we need to add a class to 
- function showCard() {
-  //  console.log('this')'this' reprent our cards in the window
-  this.classList.add('turn')// flip
+  function showCard() {
+    //  console.log('this')
+    //  'this' reprent our cards in the window
+    this.classList.add('turn')// flip
+
+    // conditions to checked winning combinations 
+   if (!cardsTurned) {
+  // if cardsTurned is false it means the user is clicking at the first card   
+    //  cardsTurned = true
+     firstOpenC = this;// card
+    //console.log(cardsTurned, firstOpenC)
+   }else { // if cardsTurned is true , the player is clicking on the second card
+    // cardsTurned = false
+    secondOpenC = this
+    //console.log(firstOpenC, secondOpenC)
+
+   }
+ 
  }
-// showCard()
 
-// changing the cards (not flipping them) refering than when I'm selecting the img I want to change the look not the card
-
-// function cardsPairs() {
-//   cardsValue.classList.add()
-// }
-
-
-// function tossCard() {
-// }
-
+ 
+  // (function shuffleCards() {
+  //  allCards.forEach(function(card) {
+  //    let random = Math.floor(Math.random() * 12)
+  //    card.style.order = random
+  //  })
+  // })()
 
   //it would be called when program loads to initialize the game  
   // i can be also a callback funtion for the restart button 
-// function init(){
+  // function init() {
+  //   shuffleCards()
 
-// }
+  // }
 
     
 
