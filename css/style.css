@@ -12,6 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    color: goldenrod;
 }
 
 .container {
@@ -69,6 +70,13 @@ body > span:second child {
     transition: transform .2s;
 
 }  
+#restart {
+    margin: 8px;
+    font-size: 20px;
+    border-radius: solid grey ;
+    background-color: goldenrod;
+
+}
 
 
 
