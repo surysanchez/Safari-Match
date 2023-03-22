@@ -14,21 +14,26 @@ lockCards = false;
 
 //  const restartGame = document.getElementById('auto-restart')
 const allCards = document.querySelectorAll('.cards')
-
+const resetButton = document.getElementById('restart').
 
 
 /*----- event listeners -----*/
 // 1st step To reveal the cards , we loop through all the cards slected and fire an event listener so when the cards are clicked we show the card
 // I also shuffle the cards using the forEach loop
-  allCards.forEach(function(card) {
-   card.addEventListener('click', showCard)
-   allCards.forEach(function(card) {
-    let random = Math.floor(Math.random() * 12)
-    card.style.order = random
-  })
-  })
+
+allCards.forEach(function() {
+  card.addEventListener('click', showCard)
+  let random = Math.floor(Math.random() * 12)
+     card.style.order = random
+
+})
 
 	/*----- functions -----*/
+// shuffle the cards
+  //  allCards.forEach(function(){
+  //    let random = Math.floor(Math.random() * 12)
+  //    card.style.order = random
+  //  })
 
 // 2nd step is to reveal the cards , in this callback funtion we need to add a class to 
 // init function 
@@ -59,7 +64,7 @@ const allCards = document.querySelectorAll('.cards')
     if(firstOpenC.dataset.img === secondOpenC.dataset.img) {
       // if it is a match
       deactivateCards()
-    }else {
+    } else {
      //not a match
      turnBackCards()
     }
@@ -82,12 +87,13 @@ const allCards = document.querySelectorAll('.cards')
      },1000)
   }
 
-  function restartGame() {
-    let cardsTurned = false;
-    lockCards = false;
-  }
+  // function restartGame() {
+  //   location.reload();
+  //   // let cardsTurned = false;
+  //   // lockCards = false;
+  // }
 
-    const resetButton = document.getElementById('restart').addEventListener('click', restartGame )
+  // resetButton.addEventListener('click', restartGame )
   
     
 
