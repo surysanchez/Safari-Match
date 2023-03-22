@@ -30,34 +30,30 @@ const allCards = document.querySelectorAll('.cards')
 
 	/*----- functions -----*/
 
-// 2nd step is to show the cards , in this callback funtion we need to add a class to 
-// this is my init function 
+// 2nd step is to reveal the cards , in this callback funtion we need to add a class to 
+// init function 
    function showCard() {
-    if (lockCards) return 
-    // to avoid the cards to remain flipped when user double clicks we need to add this contidion
-    if (this === firstOpenC) return 
 
-     //  'this' represent our cards in the window
-     this.classList.add('turn')// flip
-     // if cardsTurned is false it means the user is clicking at the first card  
+    if (lockCards) return // to avoid the cards to remain  
+                          //flipped when user double
+                         //clicks we need to add this contidion.
+
+   //  'this' represent our cards in the window
+    if (this === firstOpenC) return 
+     this.classList.add('turn')
+     
+     // if cardsTurned(card clicked) is false it means the user is clicking at the first card  
     if (!cardsTurned) {
     cardsTurned = true
-    firstOpenC = this// card
-    // console.log(cardsTurned, firstOpenC)
+    firstOpenC = this// cards
 
      }else { // if cardsTurned is true , the player is clicking on the second card
       cardsTurned = false
       secondOpenC = this
       checkCardMatch()
-
-    //  console.log(firstOpenC, secondOpenC)
-    //  console.log(firstOpenC.dataset.img)
-    //   console.log(secondOpenC.dataset.img)
-    
-    // check if cards match
   }
 }
-  
+  // check if cards match
   function checkCardMatch() {
     // if they are the same , we have match and we remove event listener , for them not be clicked again
     if(firstOpenC.dataset.img === secondOpenC.dataset.img) {
