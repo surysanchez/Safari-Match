@@ -66,7 +66,7 @@ allCards.forEach(function(card) {
     firstOpenC.removeEventListener('click', showCard)
     secondOpenC.removeEventListener('click', showCard)
     setTimeout(() => {
-      alert ("It's a match!")
+      alert("It's a match!")
     }, 500)
   }
   
@@ -95,7 +95,6 @@ allCards.forEach(function(card) {
    }
    
   
-    
 
 
 
