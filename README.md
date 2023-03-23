@@ -13,8 +13,8 @@
 * CardStarter CSS Library
 
 # Getting Started
-[Click to play Memory]()
+[Click to play _Match Two Cards_]()
 
 # Next Steps
-1. Attach a specific timer ,consequently the player will have a determined amount of time to find the matches.
+1. Attach a specific timer  ,  consequently the player will have a determined amount of time to find the matches.
 2. Secure the cards's deck to the board , in order to eliminate the dragging effect.
