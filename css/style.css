@@ -71,4 +71,15 @@ img {
 
 }
 
+.match-message {
+    position: absolute;
+    width: 40%;
+    height: 30%;
+    background-color: ghostwhite;
+    opacity: 0.6;
+    z-index: 100;
+    display: block;
+    text-align: center;
+    align-items: center;
 
+}

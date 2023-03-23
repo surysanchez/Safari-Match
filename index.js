@@ -55,6 +55,7 @@ allCards.forEach(function(card) {
     if(firstOpenC.dataset.img === secondOpenC.dataset.img) {
       // if it is a match
       deactivateCards()
+      matchMessage()
     } else {
      //not a match
      turnBackCards()
@@ -66,7 +67,8 @@ allCards.forEach(function(card) {
     firstOpenC.removeEventListener('click', showCard)
     secondOpenC.removeEventListener('click', showCard)
     setTimeout(() => {
-      alert("It's a match!")
+      matchMessage
+      // alert("It's a match!")
     }, 500)
   }
   
@@ -95,6 +97,11 @@ allCards.forEach(function(card) {
    }
    
   
+  function matchMessage() {
+    let message = document.querySelector('.match-message')
+    message.style.display ='block'
+    message.textContent = 'Bravo! You found a match.'
+  }
 
 
 
