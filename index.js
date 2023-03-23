@@ -17,7 +17,7 @@ const resetButton = document.getElementById('restart')
 /*----- event listeners -----*/
 
 resetButton.addEventListener('click', restartGame )
-// 1st step : To reveal the cards , we loop through all the cards slected and fire an event listener so when the cards are clicked we show the card
+// 1st step : To reveal the cards , we loop through all the cards selected and fire an event listener so when the cards are clicked we show the cards
 // 2nd step : I also shuffle the cards using the forEach loop
 
 allCards.forEach(function(card) {
@@ -32,22 +32,18 @@ allCards.forEach(function(card) {
 // 3rd step: is to check wich card user clicked (first or second ) to perform the matching logic .
 // init function 
    function showCard() {
-
    // lock the board
-    if (lockCards) return // to avoid the cards to remain  
-                          //flipped when user double
-                         //clicks we need to return true
+    if (lockCards) return //to avoid the cards to remain flipped when user double clicks , lock board.
    if (this === firstOpenC) return 
     //  'this' represent our cards in the window
      // added a class of '.turn ' 
      this.classList.add('turn')
-     
-     // if cardsTurned(card clicked) is false it means the user is clicking at the first card , then set I set it to true and assign its value to 'this'
+     //checking which card the player is clicking (first or second)
     if (!cardsTurned) {
     cardsTurned = true
     firstOpenC = this// cards
 
-     }else { // if cardsTurned is true , the player is clicking on the second card , then I set it to false and assign its value to this 
+     }else {  
       cardsTurned = false
       secondOpenC = this
       checkCardMatch()
