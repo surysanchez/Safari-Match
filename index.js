@@ -1,5 +1,3 @@
-/*----- constants -----*/
-
 
 /*----- state variables -----*/
 let firstOpenC 
@@ -81,7 +79,7 @@ allCards.forEach(function(card) {
      },1000)
 
   }
-// // after each round set first card and second card to null
+  // after each round set first card and second card to null
     function resetBoard(){
       showCard = false;
       lockCards = false;

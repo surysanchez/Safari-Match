@@ -13,7 +13,9 @@
 * CardStarter CSS Library
 
 # Getting Started
-[Click here to play _Match Two Cards_](https://surysanchez.github.io/memory-matches/)
+[Click here to play _Match Two Cards_](:targe='blank'https://surysanchez.github.io/memory-matches/)
+
+
 
 # Next Steps
 1. Attach a specific timer  ,  consequently the player will have a determined amount of time to find the matches.
