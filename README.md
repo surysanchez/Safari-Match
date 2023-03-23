@@ -13,7 +13,7 @@
 * CardStarter CSS Library
 
 # Getting Started
-[Click here to play _Match Two Cards_](:targe='blank'https://surysanchez.github.io/memory-matches/)
+[Click here to play _Match Two Cards_](https://surysanchez.github.io/memory-matches/)
 
 
 
