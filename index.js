@@ -8,6 +8,7 @@ let cardsTurned = false;
 lockCards = false;
 
 
+
 /*----- cached elements  -----*/
 
 const allCards = document.querySelectorAll('.cards')
@@ -59,7 +60,7 @@ allCards.forEach(function(card) {
     } else {
      //not a match
      turnBackCards()
-    }
+    }  
   }
 
   function deactivateCards() {
@@ -80,7 +81,7 @@ allCards.forEach(function(card) {
       firstOpenC.classList.remove('turn')
       secondOpenC.classList.remove('turn')
       lockCards = false //unlocked after cards have been flip again
-     },1000)
+     }, 1000)
 
   }
 // // after each round set first card and second card to null
@@ -101,8 +102,22 @@ allCards.forEach(function(card) {
     let message = document.querySelector('.match-message')
     message.style.display ='block'
     message.textContent = 'Bravo! You found a match.'
+    setTimeout(() => {
+      message.textContent = '';
+      matchMessage = null 
+      message.classList.remove('match-message')
+    }, 500)
+    
   }
-
+// function removeMessage(){
+//   if (firstOpenC !== secondOpenC || firstOpenC === secondOpenC ) {
+//     setTimeout(()=> {
+//       firstOpenC.classList.remove('match-message')
+//       secondOpenC.classList.remove('match-message')
+//       (!matchMessage) = null 
+//     }, 200)
+//     } 
+// }
 
 
 
