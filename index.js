@@ -10,8 +10,6 @@ lockCards = false;
 
 /*----- cached elements  -----*/
 
-  // const attempts = document.getElementById('moves-left').textContent = score;
-
 const allCards = document.querySelectorAll('.cards')
 const resetButton = document.getElementById('restart')
 
@@ -39,7 +37,7 @@ allCards.forEach(function(card) {
     if (lockCards) return // to avoid the cards to remain  
                           //flipped when user double
                          //clicks we need to return true
-    // if (this === firstOpenC) return 
+   if (this === firstOpenC) return 
     //  'this' represent our cards in the window
      // added a class of '.turn ' 
      this.classList.add('turn')
@@ -83,24 +81,22 @@ allCards.forEach(function(card) {
     setTimeout(() =>  {
       firstOpenC.classList.remove('turn')
       secondOpenC.classList.remove('turn')
-      
       lockCards = false //unlocked after cards have been flip again
      },1000)
 
   }
 // // after each round set first card and second card to null
-//    function resetBoard(){
-//      showCard = false;
-//      lockCards = false;
-//      firstOpenC = null;
-//      secondOpenC = null;
-//    }
+    function resetBoard(){
+      showCard = false;
+      lockCards = false;
+      firstOpenC = null;
+      secondOpenC = null;
+    }
 
   // 6th step Restart the game
    function restartGame() {
      window.location.reload();
    }
-
    
   
     
