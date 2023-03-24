@@ -18,5 +18,6 @@
 
 
 # Next Steps
-1. Attach a specific timer  ,  consequently the player will have a determined amount of time to find the matches.
-2. Secure the cards's deck to the board , in order to eliminate the dragging effect.
+* Replace the alert that appears when the cards match with an animated custom mesage
+* Attach a specific timer  ,  consequently the player will have a determined amount of time to find the matches.
+* Secure the cards's deck to the board , in order to eliminate the dragging effect.

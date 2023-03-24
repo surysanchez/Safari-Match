@@ -3,7 +3,7 @@
 let firstOpenC 
 let secondOpenC 
 let cardsTurned = false;
-lockCards = false;
+let lockCards = false;
 
 
 /*----- cached elements  -----*/
