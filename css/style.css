@@ -13,10 +13,7 @@ body {
     color: #441c94;
     background-color: bisque;
 }
-h3 {
-    color: black;
-    font-size: small;
-}
+
 .container {
     display: flex;  
     align-items: center;
