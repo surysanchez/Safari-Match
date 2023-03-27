@@ -67,11 +67,10 @@ allCards.forEach(function(card) {
     // if they are the same , we have a match and we remove event listener , for them not be clicked again
     firstOpenC.removeEventListener('click', showCard)
     secondOpenC.removeEventListener('click', showCard)
-    setTimeout(() => {
-      
-      // matchMessage
+      //  setTimeout(() => {
+        // matchMessage()
       // alert("It's a match!")
-    }, 500)
+        // }, 200)
   }
   
   function turnBackCards() {
@@ -99,28 +98,27 @@ allCards.forEach(function(card) {
    }
    
   
-  // function matchMessage() {
-  //   let message = document.querySelector('.match-message')
-  //   message.forEach(function(msg) {
-  //     message.style.display ='block'
-  //     message.textContent = 'Bravo! You found a match.'
-  //     setTimeout(() => {
-  //       message.textContent = '';
-  //       matchMessage = null 
-  //       message.classList.remove('match-message')
-  //     }, 1000)
-  //   })
+   function matchMessage() {
+     let message = document.querySelector('.match-message')
+       message.style.display ='block'
+       message.innerHTML = 'Bravo! You found a match.'
+         setTimeout(() => {
+        removeMessage()
+          //  message.textContent = '';
+          //  matchMessage = null 
+          //  message.classList.remove('match-message')
+         }, 500)
    
-  // }
-// function removeMessage(){
-//   if (firstOpenC !== secondOpenC || firstOpenC === secondOpenC ) {
-//     setTimeout(()=> {
-//       firstOpenC.classList.remove('match-message')
-//       secondOpenC.classList.remove('match-message')
-//       (!matchMessage) = null 
-//     }, 200)
-//     } 
-// }
+   }
+ function removeMessage(){
+   if (firstOpenC !== secondOpenC || firstOpenC === secondOpenC ) {
+     setTimeout(()=> {
+       firstOpenC.classList.remove('match-message')
+       secondOpenC.classList.remove('match-message')
+       (!matchMessage) = null 
+     }, 200)
+     } 
+ }
 
 
 
