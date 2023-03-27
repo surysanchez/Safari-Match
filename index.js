@@ -68,7 +68,8 @@ allCards.forEach(function(card) {
     firstOpenC.removeEventListener('click', showCard)
     secondOpenC.removeEventListener('click', showCard)
     setTimeout(() => {
-      matchMessage
+      
+      // matchMessage
       // alert("It's a match!")
     }, 500)
   }
@@ -98,17 +99,19 @@ allCards.forEach(function(card) {
    }
    
   
-  function matchMessage() {
-    let message = document.querySelector('.match-message')
-    message.style.display ='block'
-    message.textContent = 'Bravo! You found a match.'
-    setTimeout(() => {
-      message.textContent = '';
-      matchMessage = null 
-      message.classList.remove('match-message')
-    }, 500)
-    
-  }
+  // function matchMessage() {
+  //   let message = document.querySelector('.match-message')
+  //   message.forEach(function(msg) {
+  //     message.style.display ='block'
+  //     message.textContent = 'Bravo! You found a match.'
+  //     setTimeout(() => {
+  //       message.textContent = '';
+  //       matchMessage = null 
+  //       message.classList.remove('match-message')
+  //     }, 1000)
+  //   })
+   
+  // }
 // function removeMessage(){
 //   if (firstOpenC !== secondOpenC || firstOpenC === secondOpenC ) {
 //     setTimeout(()=> {

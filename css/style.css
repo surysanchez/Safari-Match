@@ -84,5 +84,28 @@ img {
     text-align: center;
     align-items: center;
     justify-content: center;
+}
 
+@media (max-width: 500px) {
+    body {
+        width: 80vh;
+        display: block;
+        color:black;
+        padding: 18px;
+        align-items: center;
+        justify-content: center;
+    }
+    .container {
+       display: flex;  
+       align-items: center; 
+       margin: auto;
+   }
+   .cards {
+    margin:0;
+    width:22%;
+    height: 34%;
+    position:relative;
+   }
+   
+    
 }
