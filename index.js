@@ -1,10 +1,13 @@
+
 /*----- constants -----*/
+
+
 
 /*----- state variables -----*/
 let firstOpenC;
 let secondOpenC;
 let cardsTurned = false;
-lockCards = false;
+let lockCards = false;
 
 /*----- cached elements  -----*/
 
@@ -65,6 +68,7 @@ function deactivateCards() {
   secondOpenC.removeEventListener("click", showCard);
 }
 
+
 function turnBackCards() {
   lockCards = true;
   // not a match , remove the 'turn' class to flip them back
@@ -82,6 +86,22 @@ function resetBoard() {
   firstOpenC = null;
   secondOpenC = null;
 }
+
+  }
+  // after each round set first card and second card to null
+    function resetBoard(){
+      showCard = false;
+      lockCards = false;
+      firstOpenC = null;
+      secondOpenC = null;
+    }
+
+  // 6th step Restart the game
+   function restartGame() {
+     window.location.reload();
+   }
+   
+ 
 
 // 6th step Restart the game
 function restartGame() {
