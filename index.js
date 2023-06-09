@@ -4,18 +4,22 @@
 let firstOpenC;
 let secondOpenC;
 let cardsTurned = false;
-let lockCards = false;
+lockCards = false;
+let timesecond = 60;
 
 /*----- cached elements  -----*/
 
 const allCards = document.querySelectorAll(".cards");
 const resetButton = document.getElementById("restart");
 const gameStatus = document.getElementById("gameStatus");
+const timer = document.querySelector(".timer");
+const btnstart = document.querySelector(".start");
 
 /*----- event listeners -----*/
 
 resetButton.addEventListener("click", restartGame);
-// 1st step : To reveal the cards , we loop through all the cards selected and fire an event listener so when the cards are clicked we show the cards
+btnstart.addEventListener("click", startTimer);
+// Reveal the cards , we loop through all the cards selected and fire an event listener so when the cards are clicked we show the cards
 // 2nd step : I also shuffle the cards using the forEach loop
 
 allCards.forEach(function (card) {
@@ -26,7 +30,31 @@ allCards.forEach(function (card) {
 
 /*----- functions -----*/
 
-// 3rd step: is to check wich card user clicked (first or second ) to perform the matching logic .
+// Timer
+displayTime(timesecond);
+
+function displayTime(second) {
+  const min = Math.floor(second / 60);
+  const sec = Math.floor(second % 60);
+  timer.innerHTML = `${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}`;
+}
+
+function endTimer() {
+  timer.innerHTML = "TIME OUT ⌛️";
+}
+
+function startTimer() {
+  const countDown = setInterval(() => {
+    timesecond--;
+    displayTime(timesecond);
+    if (timesecond <= 0 || timesecond < 1) {
+      endTimer();
+      clearInterval(countDown);
+    }
+  }, 1200);
+}
+
+// check which card user clicked (first or second ) to perform the matching logic .
 // init function
 function showCard() {
   // lock the board
@@ -45,7 +73,7 @@ function showCard() {
     checkCardMatch();
   }
 }
-// 4th step: check if cards match
+// check if cards match
 function checkCardMatch() {
   // added 'data-img' attributte to the images in html , to acces the images I used dataset .
   if (firstOpenC.dataset.img === secondOpenC.dataset.img) {
@@ -83,19 +111,6 @@ function resetBoard() {
   secondOpenC = null;
 }
 
-// after each round set first card and second card to null
-function resetBoard() {
-  showCard = false;
-  lockCards = false;
-  firstOpenC = null;
-  secondOpenC = null;
-}
-
-// 6th step Restart the game
-function restartGame() {
-  window.location.reload();
-}
-
 async function matchMessage() {
   let message = document.querySelector(".match-message");
   message.style.display = "block";
@@ -115,12 +130,7 @@ async function notMatch() {
   }, 2500);
 }
 
-//  function removeMessage(){
-//    if (firstOpenC !== secondOpenC || firstOpenC === secondOpenC ) {
-//      setTimeout(()=> {
-//        firstOpenC.classList.remove('match-message')
-//        secondOpenC.classList.remove('match-message')
-//        (!matchMessage) = null
-//      }, 200)
-//      }
-//  }
+// Restart the game
+function restartGame() {
+  window.location.reload();
+}
