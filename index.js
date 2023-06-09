@@ -1,7 +1,4 @@
-
 /*----- constants -----*/
-
-
 
 /*----- state variables -----*/
 let firstOpenC;
@@ -68,7 +65,6 @@ function deactivateCards() {
   secondOpenC.removeEventListener("click", showCard);
 }
 
-
 function turnBackCards() {
   lockCards = true;
   // not a match , remove the 'turn' class to flip them back
@@ -87,21 +83,19 @@ function resetBoard() {
   secondOpenC = null;
 }
 
-  
-  // after each round set first card and second card to null
-    function resetBoard(){
-      showCard = false;
-      lockCards = false;
-      firstOpenC = null;
-      secondOpenC = null;
-    }
+// after each round set first card and second card to null
+function resetBoard() {
+  showCard = false;
+  lockCards = false;
+  firstOpenC = null;
+  secondOpenC = null;
+}
 
-  // 6th step Restart the game
-   function restartGame() {
-     window.location.reload();
-   }
-   
- 
+// 6th step Restart the game
+function restartGame() {
+  window.location.reload();
+}
+
 async function matchMessage() {
   let message = document.querySelector(".match-message");
   message.style.display = "block";
@@ -109,9 +103,10 @@ async function matchMessage() {
   message.innerHTML = "Bravo! You found a match.";
   setTimeout(() => {
     message.innerHTML = "";
+    // message.innerText = "";
   }, 2500);
 }
-function notMatch() {
+async function notMatch() {
   let message = document.querySelector(".match-message");
   message.style.display = "block";
   message.innerHTML = "Try again..";
