@@ -7,6 +7,10 @@
     <title>MEMORY MATCH</title>
     <link rel="stylesheet" href="css/style.css"/>
     <script defer src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -16,21 +20,22 @@
 </head>
 <body>
      <h1>Match Two Cards!</h1>
-     <h5 id="gameStatus"></h5>
+     <div class="match-message"></div>
+  
     <!-- <span id="moves-left">Moves left:</span> -->
 <div class="container">
      <div class="cards" data-img="1"> 
-         <img class="frontC" src="https://cdn.pixabay.com/photo/2017/05/31/18/38/sea-2361247_1280.jpg">   
+         <img class="frontC" src="https://i.imgur.com/3d02PNI.jpg">   
          <img class='backC' src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png">     
     </div>
 
     <div class="cards" data-img="1">
-        <img class="frontC" src="https://cdn.pixabay.com/photo/2017/05/31/18/38/sea-2361247_1280.jpg">   
+        <img class="frontC" src="https://i.imgur.com/3d02PNI.jpg">   
        <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png"> 
           
     </div>
 
-    <div class="cards" data-img="2">
+    <!-- <div class="cards" data-img="2">
         <img class="frontC" src="https://cdn.pixabay.com/photo/2017/05/08/13/15/bird-2295436__480.jpg">
        <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png"> 
 
@@ -40,8 +45,8 @@
         <img class="frontC" src="https://cdn.pixabay.com/photo/2017/05/08/13/15/bird-2295436__480.jpg">
         <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png"> 
           
-    </div>
-    <div class="cards" data-img="3">
+    </div> -->
+    <!-- <div class="cards" data-img="3">
         <img class="frontC" src="https://cdn.pixabay.com/photo/2018/07/31/22/08/lion-3576045__480.jpg">
        <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png"> 
         
@@ -49,21 +54,21 @@
         <div class="cards" data-img="3">
             <img class ="frontC" src="https://cdn.pixabay.com/photo/2018/07/31/22/08/lion-3576045__480.jpg">
              <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png"> 
-            </div>
+            </div> -->
 
-        <div class="cards" data-img="4">
-        <img class="frontC" src="https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554__480.jpg">
+        <!-- <div class="cards" data-img="4">
+        <img class="frontC" src="https://i.imgur.com/1xfAFpE.jpg">
         <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png"> 
          
     </div>
     <div class="cards" data-img="4">
-        <img class="frontC" src="https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554__480.jpg">
+        <img class="frontC" src="https://i.imgur.com/1xfAFpE.jpg">
         <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png"> 
           
-    </div>
+    </div> -->
 
 
-    <div class="cards" data-img="5">
+    <!-- <div class="cards" data-img="5">
         <img class="frontC" src="https://cdn.pixabay.com/photo/2019/08/19/07/45/corgi-4415649__480.jpg">
         <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png"> 
          
@@ -72,7 +77,7 @@
         <img class="frontC" src="https://cdn.pixabay.com/photo/2019/08/19/07/45/corgi-4415649__480.jpg">
         <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png">
       
-    </div> 
+    </div>  -->
 
 
     <div class="cards" data-img="6">
@@ -85,10 +90,52 @@
           <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png">
         
     </div>  
+    <div class="cards" data-img="7">
+        <img class="frontC" src="https://i.imgur.com/ZsN6c2A.jpg">
+        <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png"> 
+         
+    </div> 
+    <div class="cards" data-img="7">
+        <img class="frontC" src="https://i.imgur.com/ZsN6c2A.jpg">
+        <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png"> 
+         
+    </div> 
+
+    <div class="cards" data-img="8">
+         <img class="frontC" src="https://i.imgur.com/JO9ZAm0.jpg">
+          <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png">
+        
+    </div>  
+    <div class="cards" data-img="8">
+         <img class="frontC" src="https://i.imgur.com/JO9ZAm0.jpg">
+          <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png">
+        
+    </div>  
+
+    <div class="cards" data-img="9">
+        <img class="frontC" src="https://i.imgur.com/LDxiclg.jpg">
+        <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png"> 
+         
+    </div>
+    <div class="cards" data-img="9">
+        <img class="frontC" src="https://i.imgur.com/LDxiclg.jpg">
+        <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png"> 
+         
+    </div>
+    <div class="cards" data-img="10">
+         <img class="frontC" src="https://i.imgur.com/uz8F7P2.jpg">
+          <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png">
+        
+    </div>  
+    <div class="cards" data-img="10">
+         <img class="frontC" src="https://i.imgur.com/uz8F7P2.jpg">
+          <img class="backC" src="https://cdn.pixabay.com/photo/2019/03/03/20/23/background-4032775_1280.png">
+        
+    </div>  
 
   </div>
-<button class="animate__animated animate__tada" id="restart">Play Again</button>
-<div class="match-message"></div>
+<button class="animate__animated animate__tada" id="restart">Restart</button>
+
 </section>
 </body>
 </html>

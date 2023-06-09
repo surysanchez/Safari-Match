@@ -10,6 +10,7 @@ lockCards = false;
 
 const allCards = document.querySelectorAll(".cards");
 const resetButton = document.getElementById("restart");
+const gameStatus = document.getElementById("gameStatus");
 
 /*----- event listeners -----*/
 
@@ -62,10 +63,6 @@ function deactivateCards() {
   // if they are the same , we have a match and we remove event listener , for them not be clicked again
   firstOpenC.removeEventListener("click", showCard);
   secondOpenC.removeEventListener("click", showCard);
-  //  setTimeout(() => {
-  // matchMessage()
-  // alert("It's a match!")
-  // }, 200)
 }
 
 function turnBackCards() {
@@ -96,34 +93,17 @@ async function matchMessage() {
   message.style.display = "block";
   // setTimeout(() => {
   message.innerHTML = "Bravo! You found a match.";
-  //  setTimeout(() => {
-  // removeMessage()
-  //   //  message.textContent = '';
-  //   //  matchMessage = null
-  //   //  message.classList.remove('match-message')
-  // }, 300);
-  // setTimeout(() => {
-  // let nomessage = (nomessage.innerHTML = "");
-  // await nomessage;
-  // }, 800);
   setTimeout(() => {
     message.innerHTML = "";
-  }, 1500);
+  }, 2500);
 }
 function notMatch() {
   let message = document.querySelector(".match-message");
   message.style.display = "block";
   message.innerHTML = "Try again..";
-  //  setTimeout(() => {
-  // removeMessage()
-  //   //  message.textContent = '';
-  //   //  matchMessage = null
-  //   //  message.classList.remove('match-message')
-  //  }, 500)
   setTimeout(() => {
     message.innerHTML = "";
-  }, 1500);
-  // message = setClass
+  }, 2500);
 }
 
 //  function removeMessage(){

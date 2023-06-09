@@ -1,8 +1,9 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    font-family: 'Vidaloka', serif;
 }
 
 body {
@@ -14,11 +15,16 @@ body {
     color: #441c94;
     background-color: bisque;
     size: 26px;
+    padding-top: 5px;
+   
+   
 }
+
 
 .container {
      /* border-radius: 2px solid green; */
     display: flex;  
+    padding-top: 50px;
     align-items: center;
     width:900px;
     height:700px;  
@@ -30,7 +36,9 @@ body {
 .cards {
     margin:0;
     width:25%;
-    height: 32.5%;
+    height: 35%;
+    /* width:16vw;
+    height: 30vh; */
     position:relative;
       /* parent of frontC and backC  */
     transform: scale(1.1);
@@ -65,14 +73,22 @@ img {
     transition: transform 2.s; 
 }   
 #restart {
-    margin: 8px;
+    padding: 1%;
+    margin-top: 15px;
+    border-radius: 40%;
     font-size: 20px;
     border-radius: solid grey ;
-    background-color: goldenrod;
+    background-color: rgb(218, 206, 32);
+}
+
+#restart:hover{
+    background-color: green ;
+    color: white;
 
 }
 
 .match-message {
+    margin-top: 8px;
     position: absolute;
     top:5%;
     width: 30%;
@@ -84,6 +100,10 @@ img {
     text-align: center;
     align-items: center;
     justify-content: center;
+    text-decoration: underline;
+    font-size:x-large;
+    color:white;
+    font-weight: bolder;
 }
 
 @media (max-width: 500px) {
