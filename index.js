@@ -87,7 +87,7 @@ function resetBoard() {
   secondOpenC = null;
 }
 
-  }
+  
   // after each round set first card and second card to null
     function resetBoard(){
       showCard = false;
