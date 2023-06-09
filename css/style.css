@@ -26,6 +26,7 @@ body {
     display: flex;  
     /* padding-top: 50px; */
     align-items: center;
+    justify-content: center;
     width:900px;
     height:700px;  
     flex-wrap: wrap; 
@@ -36,7 +37,7 @@ body {
 .cards {
     margin:0;
     width:23%;
-    height: 36%;
+    height: 35%;
     /* width:16vw;
     height: 30vh; */
     position:relative;
@@ -75,7 +76,7 @@ img {
 }   
 #restart {
     display: flex;
-    margin-top: 14%;
+    margin-top: 11.5%;
     margin-bottom: 1%;
     border-radius: 40%;
     font-size: 20px;
@@ -132,11 +133,7 @@ img {
    }
 }
 
-/* .status{
-    display: flex;
-    justify-content:flex-end;
 
-} */
 .timer{
     display: flex;
     padding:0%;

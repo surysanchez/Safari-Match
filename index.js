@@ -11,7 +11,6 @@ let timesecond = 60;
 
 const allCards = document.querySelectorAll(".cards");
 const resetButton = document.getElementById("restart");
-const gameStatus = document.getElementById("gameStatus");
 const timer = document.querySelector(".timer");
 const btnstart = document.querySelector(".start");
 
