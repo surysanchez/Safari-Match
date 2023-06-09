@@ -102,12 +102,6 @@ function resetBoard() {
    }
    
  
-
-// 6th step Restart the game
-function restartGame() {
-  window.location.reload();
-}
-
 async function matchMessage() {
   let message = document.querySelector(".match-message");
   message.style.display = "block";
