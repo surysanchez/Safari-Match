@@ -1,4 +1,4 @@
-# Match Two Cards 
+# Safari-Match
 #### Built a browser-based game, this a memory game containing *12 cards* which are _shuffled_ and placed face-down on the board. The players take turns to reveal two cards. If both cards have the same picture, then they keep the cards, otherwise, they turn the cards face down again.    The winner is the person with the _most cards matched_ when all the cards have been taken.
 
 # Screenshots 
