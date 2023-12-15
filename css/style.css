@@ -43,9 +43,7 @@ body {
 .cards {
     margin:0;
     width:23%;
-    height: 35%;
-    /* width:16vw;
-    height: 30vh; */
+    height: 45%; 
       /* parent of frontC and backC  */
     position:relative;  /* parent of frontC and backC  */
     transform: scale(1.1);
@@ -80,8 +78,7 @@ img {
 }   
 #restart {
     display: flex;
-    margin-top: 13.5%;
-    margin-bottom: 1%;
+    margin-top: 19%;
     border-radius: 40%;
     font-size: 20px;
     border-radius: solid grey ;
@@ -142,6 +139,22 @@ img {
     width: 35px;
     margin-left: 40px;
 }
+
+/* @media screen and (min-width: 2000px) {
+    #restart {
+        margin-top: 35%;
+        }
+}
+
+@media screen and (max-width: 1150px) {
+    #restart {
+    margin-top: 19%;
+    }
+}
+@media screen and (max-width: 850px) {}
+#restart {
+    margin-top: 15%;
+    } */
 
 @media screen and (max-width: 600px) and (min-width: 100px) {
     .container {
